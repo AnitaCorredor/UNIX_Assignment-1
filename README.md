@@ -388,6 +388,51 @@ $ wc *ala*de*
 ```
 Total of 40 files were produced.
 
+Classify the 40 files in to different folders
 
+```
+$ mkdir zm{lrr,ala}
+$ mv *ala*.* zmala/
+$ mv *lrr*.* zmlrr/
+$ mkdir zmala{incre,decre}
+$ mv *incre*.* zmalaincre/
+$ mv *decre*.* zmaladecre/
+$ cd zmlrr/
+$ mkdir zmlrr{incre,decre}
+$ mv *incre*.* zmlrrincre/
+$ mv *decre*.* zmlrrdecre/
+```
 
+check the files and folders
+```
+$ ls -R
+.:
+fang_et_al_genotypes.txt  snp_position_134_sorted.txt  snp_position.txt  UNIX_Assignment_Description.pdf  zmala
+README.md                 snp_position_134.txt         transpose.awk     UNIX_Assignment.md               zmlrr
 
+./zmala:
+zmaladecre  zmala_genotype.txt  zmalaincre  zmala_trans_genotype_sorted.txt  zmala_trans_genotype.txt  zmala.txt  zmala_with_position.txt
+
+./zmala/zmaladecre:
+zmala_with_decre_pos_chr10.txt  zmala_with_decre_pos_chr3.txt  zmala_with_decre_pos_chr6.txt  zmala_with_decre_pos_chr9.txt
+zmala_with_decre_pos_chr1.txt   zmala_with_decre_pos_chr4.txt  zmala_with_decre_pos_chr7.txt  zmala_with_decre_pos_chrmultiple.txt
+zmala_with_decre_pos_chr2.txt   zmala_with_decre_pos_chr5.txt  zmala_with_decre_pos_chr8.txt  zmala_with_decre_pos_chrunknown.txt
+
+./zmala/zmalaincre:
+zmala_with_incre_pos_chr10.txt  zmala_with_incre_pos_chr3.txt  zmala_with_incre_pos_chr6.txt  zmala_with_incre_pos_chr9.txt
+zmala_with_incre_pos_chr1.txt   zmala_with_incre_pos_chr4.txt  zmala_with_incre_pos_chr7.txt  zmala_with_incre_pos_chrmultiple.txt
+zmala_with_incre_pos_chr2.txt   zmala_with_incre_pos_chr5.txt  zmala_with_incre_pos_chr8.txt  zmala_with_incre_pos_chrunknown.txt
+
+./zmlrr:
+zmlrrdecre  zmlrr_genotype.txt  zmlrrincre  zmlrr_trans_genotype_sorted.txt  zmlrr_trans_genotype.txt  zmlrr.txt  zmlrr_with_position.txt
+
+./zmlrr/zmlrrdecre:
+zmlrr_with_decre_pos_chr10.txt  zmlrr_with_decre_pos_chr3.txt  zmlrr_with_decre_pos_chr6.txt  zmlrr_with_decre_pos_chr9.txt
+zmlrr_with_decre_pos_chr1.txt   zmlrr_with_decre_pos_chr4.txt  zmlrr_with_decre_pos_chr7.txt  zmlrr_with_decre_pos_chrmultiple.txt
+zmlrr_with_decre_pos_chr2.txt   zmlrr_with_decre_pos_chr5.txt  zmlrr_with_decre_pos_chr8.txt  zmlrr_with_decre_pos_chrunknown.txt
+
+./zmlrr/zmlrrincre:
+zmlrr_with_incre_pos_chr10.txt  zmlrr_with_incre_pos_chr3.txt  zmlrr_with_incre_pos_chr6.txt  zmlrr_with_incre_pos_chr9.txt
+zmlrr_with_incre_pos_chr1.txt   zmlrr_with_incre_pos_chr4.txt  zmlrr_with_incre_pos_chr7.txt  zmlrr_with_incre_pos_chrmultiple.txt
+zmlrr_with_incre_pos_chr2.txt   zmlrr_with_incre_pos_chr5.txt  zmlrr_with_incre_pos_chr8.txt  zmlrr_with_incre_pos_chrunknown.txt
+```
